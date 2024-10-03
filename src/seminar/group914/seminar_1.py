@@ -7,11 +7,15 @@ Problem statements to choose from:
     https://www.codecademy.com/resources/blog/python-code-challenges-for-beginners/
     https://www.freecodecamp.org/news/python-coding-challenges-for-beginners/
 """
-
+print ("Hello")
 """
 1. Given 2 ints, a and b, return True if one of them is 10 or if their sum is 10
 Question – What happens if we enter a non-integer number, or alphanumeric characters?
 """
+a = int(input ("First value")) # input returns a string (python string type)
+b = int(input (" second value"))
+print(a+b) 
+
 
 """
 2. Write a Python program which iterates the integers from 1 to 50. 
