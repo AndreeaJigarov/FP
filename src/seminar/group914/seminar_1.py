@@ -1,5 +1,17 @@
 """
 FP seminar 1 problems & solutions
+
+How to set up things!
+    1. An installation of Python 3
+    2. An IDE --> PyCharm
+    3. A GitHub account -- needed to accept assignments
+"""
+
+print("Hello World!")
+"""
+Process finished with exit code 0
+    - you need to see this to make sure the program has stopped :)
+    - exit code 0 means no errors 
 """
 
 """
@@ -41,36 +53,45 @@ in python the type is assigned at the same time as the value, so it can change a
 """
 
 """
+    static = at compile time
+    dynamic = at run time
+    
+    strongly typed language = at every moment, every variable has a well known type 
+"""
+
+# Python is a dynamically typed language
+# a = "abcd"
+# a = 2345
+
+# a = input("First value =")  # input returns a string (Python's str type)
+# b = input("Second value =")
+
+"""
+The function below uses Python type hints
+    a : int (means that the type of parameter a should be int)
+    -> bool (means that the functions should return a value of type bool)
+"""
+
+
+def is_sum_10(a: int, b: int) -> bool:
+    if a == 10 or b == 10 or a + b == 10:
+        return True
+    else:
+        return False
+
+
+# a = int(input("First value ="))  # int() is a Python builtin function to convert an str to an int
+# b = int(input("Second value ="))
+# is_sum_10(a, b)
+
+# print(a + b)  # if a and b are str, + is concatenation
+# if a and b are numbers, + is addition
+
+"""
 2. Write a Python program which iterates the integers from 1 to 50. 
 For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". 
 For numbers which are multiples of both three and five print "FizzBuzz".
 """
-
-# Version 1 without functions
-for i in range ( 1, 51):
-    if i % 3 and i%5:
-          print ( "Fizz&Buzz")
-    elif i % 3 == 0:
-          print ("Fizz")
-    elif i% 5 == 0:
-         print ("Buzz")
-    else:
-         print( i)
-
-
-#  Version 2 with functions
-def fizz_buzz ( left: int, right: int) -> list:
-     result= [] # empty list in python
-for i in range ( left, right +1):
-    if i % 3 and i%5:
-          result.append ( "Fizz&Buzz")
-    elif i % 3 == 0:
-          result.append("Fizz")
-    elif i% 5 == 0:
-         result.append("Buzz")
-    else:
-         result.append( i)
-return result
 
 """
 3. Calculate the first n terms of the Fibonacci sequence
